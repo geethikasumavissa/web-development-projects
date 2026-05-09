@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive World Population Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="map-app">
+        <aside class="sidebar" aria-labelledby="app-title">
+            <div class="intro">
+                <p class="eyebrow">Census snapshot</p>
+                <h1 id="app-title">World Population Map</h1>
+                <p class="summary">Explore selected country population estimates with density and growth indicators.</p>
+            </div>
+
+            <section class="stats" aria-label="Population summary">
+                <article>
+                    <span>Total Population</span>
+                    <strong id="total-population">0</strong>
+                </article>
+                <article>
+                    <span>Countries Shown</span>
+                    <strong id="country-count">0</strong>
+                </article>
+                <article>
+                    <span>Highest Density</span>
+                    <strong id="highest-density">-</strong>
+                </article>
+            </section>
+
+            <label class="filter">
+                <span>Region</span>
+                <select id="region-filter">
+                    <option value="all">All Regions</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Europe">Europe</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </label>
+
+            <section class="legend" aria-label="Map legend">
+                <h2>Population Scale</h2>
+                <div><i class="dot small"></i><span>Under 100M</span></div>
+                <div><i class="dot medium"></i><span>100M to 500M</span></div>
+                <div><i class="dot large"></i><span>Over 500M</span></div>
+            </section>
+
+            <section class="country-panel" aria-label="Country census data">
+                <h2>Country Data</h2>
+                <div id="country-list" class="country-list"></div>
+            </section>
+        </aside>
+
+        <section class="map-section" aria-label="Interactive map">
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

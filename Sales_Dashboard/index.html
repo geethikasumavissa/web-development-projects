@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Data Analytics Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading animation shown while local JSON data initializes. -->
+    <div id="loader" class="loader" role="status" aria-live="polite">
+        <span class="loader-ring"></span>
+        <strong>Preparing analytics workspace...</strong>
+    </div>
+
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Primary navigation">
+            <a class="brand" href="#overview" aria-label="Apex Analytics home">
+                <span class="brand-mark"><i data-lucide="activity"></i></span>
+                <span>
+                    <strong>Apex</strong>
+                    <small>Data Analytics</small>
+                </span>
+            </a>
+
+            <nav class="nav-menu">
+                <a class="active" href="#overview"><i data-lucide="layout-dashboard"></i>Overview</a>
+                <a href="#sales"><i data-lucide="bar-chart-3"></i>Sales</a>
+                <a href="#audience"><i data-lucide="users"></i>Audience</a>
+                <a href="#products"><i data-lucide="package-search"></i>Products</a>
+                <a href="#alerts"><i data-lucide="bell-ring"></i>Alerts</a>
+            </nav>
+
+            <section class="sidebar-card">
+                <span>Forecast Accuracy</span>
+                <strong>96.4%</strong>
+                <p>Models refreshed from local dashboard data.</p>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <!-- Top controls include global search, filters, theme switching, and CSV export. -->
+            <header class="topbar">
+                <button id="menuButton" class="icon-button mobile-only" type="button" aria-label="Open navigation">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div class="title-block">
+                    <p class="eyebrow">Professional admin panel</p>
+                    <h1>Data Analytics Tool</h1>
+                </div>
+
+                <div class="top-actions">
+                    <label class="search-box" for="globalSearch">
+                        <i data-lucide="search"></i>
+                        <input id="globalSearch" type="search" placeholder="Search products, regions, categories">
+                    </label>
+
+                    <select id="regionFilter" aria-label="Filter dashboard by region">
+                        <option value="all">All Regions</option>
+                    </select>
+
+                    <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle theme">
+                        <i data-lucide="moon"></i>
+                    </button>
+
+                    <button id="downloadCsv" class="primary-button" type="button">
+                        <i data-lucide="download"></i>
+                        CSV
+                    </button>
+                </div>
+            </header>
+
+            <section id="overview" class="summary-grid" aria-label="Statistics summary cards"></section>
+
+            <!-- Chart.js visualization area: bar, pie, line, doughnut, and area charts. -->
+            <section id="sales" class="dashboard-grid">
+                <article class="panel panel-wide">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">Sales analytics</p>
+                            <h2>Interactive Bar Chart</h2>
+                        </div>
+                    </div>
+                    <div class="chart-box tall">
+                        <canvas id="salesBarChart"></canvas>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">Revenue tracking</p>
+                            <h2>Line Chart</h2>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <canvas id="revenueLineChart"></canvas>
+                    </div>
+                </article>
+
+                <article id="audience" class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">User growth</p>
+                            <h2>Area Chart</h2>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <canvas id="userAreaChart"></canvas>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">Market split</p>
+                            <h2>Interactive Pie Chart</h2>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <canvas id="segmentPieChart"></canvas>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">Channel mix</p>
+                            <h2>Doughnut Chart</h2>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <canvas id="channelDoughnutChart"></canvas>
+                    </div>
+                </article>
+            </section>
+
+            <section class="lower-grid">
+                <!-- Responsive product table with filtering, sorting, search, pagination, and export support. -->
+                <article id="products" class="panel table-panel">
+                    <div class="panel-heading table-heading">
+                        <div>
+                            <p class="eyebrow">Product performance</p>
+                            <h2>Analytics Table</h2>
+                        </div>
+
+                        <div class="table-controls">
+                            <select id="categoryFilter" aria-label="Filter products by category">
+                                <option value="all">All Categories</option>
+                            </select>
+                            <select id="pageSize" aria-label="Rows per page">
+                                <option value="5">5 rows</option>
+                                <option value="8">8 rows</option>
+                                <option value="10">10 rows</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><button class="sort-button" data-sort="name" type="button">Product <i data-lucide="arrow-up-down"></i></button></th>
+                                    <th><button class="sort-button" data-sort="category" type="button">Category <i data-lucide="arrow-up-down"></i></button></th>
+                                    <th><button class="sort-button" data-sort="region" type="button">Region <i data-lucide="arrow-up-down"></i></button></th>
+                                    <th><button class="sort-button" data-sort="revenue" type="button">Revenue <i data-lucide="arrow-up-down"></i></button></th>
+                                    <th><button class="sort-button" data-sort="growth" type="button">Growth <i data-lucide="arrow-up-down"></i></button></th>
+                                    <th><button class="sort-button" data-sort="conversion" type="button">Conversion <i data-lucide="arrow-up-down"></i></button></th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsBody"></tbody>
+                        </table>
+                    </div>
+
+                    <footer class="pagination-bar">
+                        <span id="tableSummary">Loading products...</span>
+                        <div class="pagination-controls">
+                            <button id="prevPage" class="ghost-button" type="button"><i data-lucide="chevron-left"></i>Prev</button>
+                            <span id="pageInfo"></span>
+                            <button id="nextPage" class="ghost-button" type="button">Next<i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </footer>
+                </article>
+
+                <article id="alerts" class="panel notification-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">Real-time events</p>
+                            <h2>Notification Panel</h2>
+                        </div>
+                        <span id="notificationCount" class="badge">0</span>
+                    </div>
+                    <div id="notificationsList" class="notifications-list"></div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>

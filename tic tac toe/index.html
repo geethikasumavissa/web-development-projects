@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="game-card" aria-labelledby="game-title">
+            <header class="hero">
+                <div>
+                    <p class="eyebrow">Two player mode</p>
+                    <h1 id="game-title">Tic Tac Toe</h1>
+                </div>
+
+                <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle dark and light mode">
+                    <span class="theme-icon">D</span>
+                </button>
+            </header>
+
+            <section class="scoreboard" aria-label="Scoreboard">
+                <article class="score-card x-score">
+                    <span>Player X</span>
+                    <strong id="scoreX">0</strong>
+                </article>
+                <article class="score-card draws-score">
+                    <span>Draws</span>
+                    <strong id="scoreDraw">0</strong>
+                </article>
+                <article class="score-card o-score">
+                    <span>Player O</span>
+                    <strong id="scoreO">0</strong>
+                </article>
+            </section>
+
+            <div class="status-row">
+                <p id="turnIndicator" class="turn-indicator" aria-live="polite">Player X's turn</p>
+                <label class="sound-toggle">
+                    <input id="soundToggle" type="checkbox" checked>
+                    <span>Sound</span>
+                </label>
+            </div>
+
+            <section class="board-wrap" aria-label="Tic Tac Toe board">
+                <div id="winningLine" class="winning-line"></div>
+                <div id="board" class="board">
+                    <button class="cell" type="button" data-index="0" aria-label="Cell 1"></button>
+                    <button class="cell" type="button" data-index="1" aria-label="Cell 2"></button>
+                    <button class="cell" type="button" data-index="2" aria-label="Cell 3"></button>
+                    <button class="cell" type="button" data-index="3" aria-label="Cell 4"></button>
+                    <button class="cell" type="button" data-index="4" aria-label="Cell 5"></button>
+                    <button class="cell" type="button" data-index="5" aria-label="Cell 6"></button>
+                    <button class="cell" type="button" data-index="6" aria-label="Cell 7"></button>
+                    <button class="cell" type="button" data-index="7" aria-label="Cell 8"></button>
+                    <button class="cell" type="button" data-index="8" aria-label="Cell 9"></button>
+                </div>
+            </section>
+
+            <footer class="controls">
+                <button id="restartButton" class="primary-button" type="button">Restart Game</button>
+                <button id="resetScoreButton" class="secondary-button" type="button">Reset Scoreboard</button>
+            </footer>
+        </section>
+    </main>
+
+    <div id="resultModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-card">
+            <span id="modalIcon" class="modal-icon">X</span>
+            <h2 id="modalTitle">Winner</h2>
+            <p id="modalMessage">Player X wins the round.</p>
+            <button id="modalRestartButton" class="primary-button" type="button">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

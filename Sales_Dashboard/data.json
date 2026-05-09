@@ -1,0 +1,232 @@
+{
+    "charts": {
+        "monthlyRevenue": [
+            { "month": "Jan", "revenue": 178000 },
+            { "month": "Feb", "revenue": 201000 },
+            { "month": "Mar", "revenue": 224000 },
+            { "month": "Apr", "revenue": 257000 },
+            { "month": "May", "revenue": 283000 },
+            { "month": "Jun", "revenue": 306000 },
+            { "month": "Jul", "revenue": 335000 },
+            { "month": "Aug", "revenue": 361000 },
+            { "month": "Sep", "revenue": 385000 },
+            { "month": "Oct", "revenue": 417000 },
+            { "month": "Nov", "revenue": 445000 },
+            { "month": "Dec", "revenue": 480000 }
+        ],
+        "userGrowth": [
+            { "month": "Jan", "users": 42300 },
+            { "month": "Feb", "users": 46800 },
+            { "month": "Mar", "users": 51250 },
+            { "month": "Apr", "users": 55900 },
+            { "month": "May", "users": 60420 },
+            { "month": "Jun", "users": 64900 },
+            { "month": "Jul", "users": 69120 },
+            { "month": "Aug", "users": 72440 },
+            { "month": "Sep", "users": 76880 },
+            { "month": "Oct", "users": 80560 },
+            { "month": "Nov", "users": 83410 },
+            { "month": "Dec", "users": 86420 }
+        ],
+        "segments": [
+            { "name": "Enterprise", "value": 34 },
+            { "name": "SMB", "value": 26 },
+            { "name": "Retail", "value": 18 },
+            { "name": "Partners", "value": 12 },
+            { "name": "Marketplace", "value": 10 }
+        ],
+        "channels": [
+            { "name": "Website", "value": 42 },
+            { "name": "Retail", "value": 24 },
+            { "name": "Marketplace", "value": 18 },
+            { "name": "Partners", "value": 10 },
+            { "name": "Wholesale", "value": 6 }
+        ]
+    },
+    "notifications": [
+        {
+            "title": "Revenue target crossed",
+            "message": "North America exceeded the weekly goal by 14%.",
+            "time": "2 min ago",
+            "icon": "badge-dollar-sign"
+        },
+        {
+            "title": "High intent traffic",
+            "message": "Product pages are seeing a 22% lift from paid search.",
+            "time": "8 min ago",
+            "icon": "activity"
+        },
+        {
+            "title": "Inventory watch",
+            "message": "Cloud Pro seats are trending above forecast.",
+            "time": "16 min ago",
+            "icon": "package-check"
+        },
+        {
+            "title": "Conversion improved",
+            "message": "Checkout optimization increased conversion by 1.8 points.",
+            "time": "24 min ago",
+            "icon": "trending-up"
+        },
+        {
+            "title": "Campaign spike",
+            "message": "The launch campaign generated 1,820 qualified leads.",
+            "time": "31 min ago",
+            "icon": "megaphone"
+        },
+        {
+            "title": "Pipeline update",
+            "message": "Partner channel added $84K in qualified opportunities.",
+            "time": "45 min ago",
+            "icon": "git-branch"
+        },
+        {
+            "title": "Retention win",
+            "message": "Enterprise renewals improved after success outreach.",
+            "time": "1 hr ago",
+            "icon": "shield-check"
+        }
+    ],
+    "products": [
+        {
+            "name": "Apex Cloud Pro",
+            "category": "SaaS",
+            "region": "North America",
+            "revenue": 186500,
+            "orders": 1320,
+            "growth": 18.6,
+            "conversion": 9.4,
+            "icon": "cloud"
+        },
+        {
+            "name": "Insight Studio",
+            "category": "Analytics",
+            "region": "Europe",
+            "revenue": 154200,
+            "orders": 1184,
+            "growth": 14.2,
+            "conversion": 8.1,
+            "icon": "bar-chart-3"
+        },
+        {
+            "name": "Flow Automate",
+            "category": "Automation",
+            "region": "Asia Pacific",
+            "revenue": 139800,
+            "orders": 1042,
+            "growth": 21.4,
+            "conversion": 7.7,
+            "icon": "workflow"
+        },
+        {
+            "name": "Pulse CRM",
+            "category": "CRM",
+            "region": "North America",
+            "revenue": 128400,
+            "orders": 960,
+            "growth": 11.9,
+            "conversion": 6.8,
+            "icon": "contact"
+        },
+        {
+            "name": "Atlas BI",
+            "category": "Analytics",
+            "region": "Europe",
+            "revenue": 117900,
+            "orders": 822,
+            "growth": 8.5,
+            "conversion": 7.2,
+            "icon": "pie-chart"
+        },
+        {
+            "name": "Signal Ads",
+            "category": "Marketing",
+            "region": "Asia Pacific",
+            "revenue": 112300,
+            "orders": 790,
+            "growth": 16.8,
+            "conversion": 6.4,
+            "icon": "megaphone"
+        },
+        {
+            "name": "Prime Checkout",
+            "category": "Commerce",
+            "region": "North America",
+            "revenue": 104700,
+            "orders": 884,
+            "growth": 10.1,
+            "conversion": 8.8,
+            "icon": "shopping-cart"
+        },
+        {
+            "name": "Secure Desk",
+            "category": "Security",
+            "region": "Europe",
+            "revenue": 98200,
+            "orders": 640,
+            "growth": 6.7,
+            "conversion": 5.9,
+            "icon": "lock"
+        },
+        {
+            "name": "Relay Support",
+            "category": "Support",
+            "region": "Asia Pacific",
+            "revenue": 89400,
+            "orders": 710,
+            "growth": 13.3,
+            "conversion": 7.5,
+            "icon": "headphones"
+        },
+        {
+            "name": "Beacon Forms",
+            "category": "Marketing",
+            "region": "North America",
+            "revenue": 83500,
+            "orders": 620,
+            "growth": -2.4,
+            "conversion": 4.8,
+            "icon": "clipboard-list"
+        },
+        {
+            "name": "Vector API",
+            "category": "Developer",
+            "region": "Europe",
+            "revenue": 79600,
+            "orders": 588,
+            "growth": 19.5,
+            "conversion": 6.9,
+            "icon": "code-2"
+        },
+        {
+            "name": "Orbit Mobile",
+            "category": "Commerce",
+            "region": "Asia Pacific",
+            "revenue": 74200,
+            "orders": 534,
+            "growth": 5.6,
+            "conversion": 5.4,
+            "icon": "smartphone"
+        },
+        {
+            "name": "Matrix Forecast",
+            "category": "Analytics",
+            "region": "North America",
+            "revenue": 70800,
+            "orders": 420,
+            "growth": 12.6,
+            "conversion": 6.7,
+            "icon": "line-chart"
+        },
+        {
+            "name": "Nova Loyalty",
+            "category": "CRM",
+            "region": "Europe",
+            "revenue": 68400,
+            "orders": 468,
+            "growth": 7.8,
+            "conversion": 6.2,
+            "icon": "heart-handshake"
+        }
+    ]
+}

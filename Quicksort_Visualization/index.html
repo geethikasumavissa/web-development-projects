@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicksort Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="visualizer" aria-labelledby="app-title">
+            <header class="top-bar">
+                <div>
+                    <p class="eyebrow">Sorting algorithm</p>
+                    <h1 id="app-title">Quicksort Visualization</h1>
+                </div>
+
+                <div class="stats" aria-label="Sorting statistics">
+                    <article>
+                        <span>Comparisons</span>
+                        <strong id="comparisons">0</strong>
+                    </article>
+                    <article>
+                        <span>Swaps</span>
+                        <strong id="swaps">0</strong>
+                    </article>
+                </div>
+            </header>
+
+            <div class="controls">
+                <label>
+                    <span>Bars</span>
+                    <input id="size-slider" type="range" min="20" max="80" value="45">
+                </label>
+
+                <label>
+                    <span>Speed</span>
+                    <input id="speed-slider" type="range" min="10" max="220" value="80">
+                </label>
+
+                <button id="generate-button" type="button">Generate</button>
+                <button id="sort-button" type="button">Start Sort</button>
+            </div>
+
+            <div id="bars" class="bars" aria-label="Animated sorting bars"></div>
+
+            <div class="legend" aria-label="Color legend">
+                <span><i class="bar-key default"></i>Unsorted</span>
+                <span><i class="bar-key compare"></i>Comparing</span>
+                <span><i class="bar-key pivot"></i>Pivot</span>
+                <span><i class="bar-key sorted"></i>Sorted</span>
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite">Generate an array, then start the quicksort animation.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

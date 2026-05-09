@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <section class="game-panel" aria-labelledby="game-title">
+            <header class="top-bar">
+                <div>
+                    <p class="eyebrow">Classic arcade</p>
+                    <h1 id="game-title">Snake Game</h1>
+                </div>
+
+                <div class="score-card" aria-label="Current score">
+                    <span>Score</span>
+                    <strong id="score">0</strong>
+                </div>
+            </header>
+
+            <div class="canvas-wrap">
+                <canvas id="game-board" width="480" height="480" aria-label="Snake game board"></canvas>
+                <div id="overlay" class="overlay">
+                    <strong>Snake</strong>
+                    <span>Press Start or Space</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-button" type="button">Start</button>
+                <button id="pause-button" type="button">Pause</button>
+                <button id="restart-button" type="button">Restart</button>
+            </div>
+
+            <div class="mobile-pad" aria-label="Direction controls">
+                <button class="pad-button up" type="button" data-direction="up" aria-label="Move up">U</button>
+                <button class="pad-button left" type="button" data-direction="left" aria-label="Move left">L</button>
+                <button class="pad-button right" type="button" data-direction="right" aria-label="Move right">R</button>
+                <button class="pad-button down" type="button" data-direction="down" aria-label="Move down">D</button>
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite">Eat the red food. Avoid walls and your own tail.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

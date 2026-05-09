@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Puzzle Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="sudoku-panel" aria-labelledby="app-title">
+            <div class="top-bar">
+                <div>
+                    <p class="eyebrow">9x9 random puzzle</p>
+                    <h1 id="app-title">Sudoku Generator</h1>
+                </div>
+
+                <label class="difficulty-control">
+                    <span>Difficulty</span>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="board" class="sudoku-board" aria-label="Sudoku puzzle grid"></div>
+
+            <div class="actions">
+                <button id="new-puzzle" type="button">New Puzzle</button>
+                <button id="check-puzzle" type="button">Check</button>
+                <button id="solve-puzzle" type="button">Solve</button>
+                <button id="clear-puzzle" type="button">Clear</button>
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
